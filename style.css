@@ -1,0 +1,714 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #414141;
+  line-height: 1.5;
+  background: #f6f8fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+.background {
+  background: #357a29 url("img/main.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+}
+
+.header {
+  position: relative;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  max-height: 110px;
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 110px;
+}
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-text {
+  font-weight: 600;
+  font-size: 24px;
+  color: #414141;
+}
+.main-nav .nav-list {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  font-weight: 500;
+  font-size: 18px;
+  color: #414141;
+  transition: color .18s;
+}
+.main-nav a:hover {
+  color: #0070f3;
+}
+.consult-group {
+  display: flex;
+  align-items: center;
+  min-width: 400px;
+}
+.consult-caption {
+  font-weight: 400;
+  font-size: 16px;
+  color: #414141;
+  max-width: 190px;
+  margin-right: 20px;
+}
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  background: #5da3d9;
+  border-radius: 14px;
+  padding: 0 15px 0 14px;
+  height: 44px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 12px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.wa-icon {
+  position: relative;
+  bottom: 15px;
+  display: block;
+}
+.phone-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 300px;
+  gap: 6px;
+}
+.phone-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phone-number {
+  font-weight: 500;
+  font-size: 30px;
+  color: #414141;
+}
+.callback-link {
+  font-weight: 600;
+  font-size: 18px;
+  color: #357a29;
+  text-decoration: underline dotted #85bb65 2px;
+  text-underline-offset: 3px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  z-index: 1;
+}
+.hero-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 150px 0 0 250px;
+}
+.section-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+}
+.section-title-row .section-title {
+  color: #414141;
+}
+.section-title .highlight {
+  background: #5da3d9;
+  border-radius: 9px;
+  color: #fff;
+  padding: 0 14px;
+  display: inline-block;
+}
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 28px 0;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+.cta-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  background: #5da3d9;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 38px;
+  text-align: center;
+  cursor: pointer;
+  transition: background .18s, box-shadow .18s;
+  box-shadow: 0 4px 20px #4e8dbf24;
+  margin: 0;
+  display: inline-block;
+}
+.cta-btn:hover {
+  background: #357bb7;
+}
+.main-btn {
+  max-width: 350px;
+}
+
+/* Секция с заголовком и иконкой */
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 44px;
+  margin-top: 80px;
+}
+.catalog-icon {
+  border-radius: 11px;
+  background: #f3f4f7;
+  box-shadow: 0 1px 6px rgba(80,80,80,0.10);
+  display: block;
+}
+
+/* Каталог каркасных бань */
+.frame-baths {
+  max-width: 1500px;
+}
+.frame-baths .bath-details {
+  display: flex;
+  gap: 56px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.frame-baths .bath-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.frame-baths .main-img {
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #5da3d9;
+  box-shadow: 0 0 24px #5da3d933;
+}
+.frame-baths .small-images {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+.frame-baths .small-img {
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #e0e6ef;
+  background: #fff;
+}
+.frame-baths .bath-info {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.frame-baths .bath-info h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #414141;
+  margin: 0 0 14px 0;
+  line-height: 1.15;
+}
+.frame-baths .bath-info p {
+  font-size: 17px;
+  color: #414141;
+  margin: 0 0 8px 0;
+  line-height: 1.44;
+  font-weight: 400;
+}
+.frame-baths .bath-info h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 18px 0 12px 0;
+  color: #414141;
+}
+.frame-baths .bath-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  font-size: 18px;
+  color: #414141;
+  width: 100%;
+}
+.frame-baths .bath-specs li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #c5d1df;
+  padding: 4px 0;
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.frame-baths .bath-specs li span:first-child {
+  color: #666;
+  font-weight: 400;
+}
+.frame-baths .bath-specs li span:last-child {
+  color: #222;
+  font-weight: 600;
+}
+.price {
+  font-size: 28px;
+  text-decoration: underline;
+  margin-top: 15px;
+}
+.frame-baths .price-row {
+  display: flex;
+  justify-content: start;
+  gap: 38px;
+  margin: 22px 0 16px 0;
+}
+.frame-baths .bath-info .price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+  line-height: 1.2;
+  text-align: left;
+  text-decoration: none;
+}
+.frame-baths .price span {
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1a222f;
+  margin-top: 1px;
+}
+.frame-baths .bath-info .cta-btn {
+  display: inline-block;
+  margin: 28px 0 0 0;
+  font-size: 20px;
+  padding: 18px 38px;
+  border-radius: 14px;
+}
+.frame-baths .cta-btn:last-child {
+  font-size: 18px;
+  padding: 14px 30px;
+  /* max-width: 260px; */
+  display: block;
+  text-align: center;
+}
+
+.bath-grid {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+}
+.bath-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 18px;
+  box-shadow: none;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.bath-img {
+  border-radius: 18px;
+  object-fit: cover;
+  border: 3px solid transparent;
+  box-shadow: none;
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.bath-item h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #414141;
+  text-align: center;
+  margin: 15px 0 22px 0;
+  line-height: 1.22;
+}
+.type {
+  height: 70px;
+}
+
+/* Секция кровли */
+.roof-types {
+  margin-top: 72px;
+  margin-bottom: 30px;
+}
+
+.roof-types .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.roof-types .section-title {
+  color: #414141;
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 44px;
+  letter-spacing: -0.5px;
+}
+
+.roof-grid {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+}
+
+.roof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 16px 0 16px;
+  transition: box-shadow 0.18s;
+}
+
+.roof-img {
+  object-fit: contain;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.roof-title {
+  margin: 0 0 32px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #525252;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+/* Секция фундамент */
+.foundation-types {
+  margin-top: 74px;
+  margin-bottom: 32px;
+}
+.foundation-types .section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #414141;
+  text-align: center;
+  margin-bottom: 44px;
+  letter-spacing: -0.5px;
+}
+.foundation-grid {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  flex-wrap: wrap;
+}
+.foundation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 14px 12px 0 12px;
+}
+.foundation-item img {
+  display: block;
+  border-radius: 17px;
+  margin-bottom: 18px;
+}
+.foundation-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #414141;
+  text-align: center;
+  line-height: 1.18;
+}
+.foundation-desc {
+  font-weight: 400;
+  font-size: 28px;
+  color: #888;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 3px;
+}
+
+/* Секция калькулятор */
+
+.calc-form {
+  background: linear-gradient(180deg, #e8f1fa 0%, #f6faff 100%);
+  border-radius: 36px;
+  box-shadow: 0 0 0 2px #e1eaf2;
+  padding: 54px 38px 38px 38px;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-form .section-title {
+  color: #414141;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.calc-subtitle {
+  color: #313131;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.calc-fields {
+  display: flex;
+  gap: 54px;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 42px;
+}
+
+.calc-col {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 350px;
+  min-width: 270px;
+}
+
+.calc-col label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #414141;
+}
+
+.calc-col input,
+.calc-col select {
+  padding: 11px 17px;
+  border-radius: 7px;
+  border: 1.5px solid #d3e0ee;
+  font-size: 21px;
+  background: #fff;
+  margin-top: 2px;
+  font-family: inherit;
+  color: #232323;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.calc-col input:focus,
+.calc-col select:focus {
+  border: 1.5px solid #5da3d9;
+}
+
+.calc-btn {
+  margin-top: 30px;
+  background: #5da3d9;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 16px 52px 16px 52px;
+  border-radius: 16px;
+  box-shadow: 0 4px 22px #4e8dbf22;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  transition: background 0.18s;
+}
+
+.calc-btn:hover {
+  background: #357bb7;
+}
+
+.calc-icon {
+  width: 63px;
+  height: 67px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Footer */
+.footer {
+  position: relative;
+  border-radius: 32px 32px 0 0;
+  margin-top: 44px;
+  overflow: visible;
+  background: url("img/footer.webp") no-repeat;
+}
+
+.footer .container {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 16px;
+  z-index: 2;
+  background: transparent;
+}
+
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 44px;
+  border: 1.2px solid #bababa;
+  border-radius: 32px;
+  padding: 42px 44px 38px 44px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #414141;
+  min-width: 230px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.footer-menu li {
+  margin-bottom: 12px;
+}
+.footer-menu a {
+  font-size: 20px;
+  color: #414141;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footer-menu a:hover {
+  color: #357bb7;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 320px;
+}
+
+.footer-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 27px;
+  font-weight: 600;
+  color: #1a222f;
+  margin-bottom: 4px;
+}
+
+.footer-callback {
+  color: #357a29;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: underline dotted #85bb65 2px;
+  text-underline-offset: 3px;
+  margin-bottom: 2px;
+  margin-left: 45px;
+}
+
+.footer-desc {
+  color: #414141;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #5da3d9;
+  border-radius: 14px;
+  padding: 0 19px;
+  height: 44px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+.wa-icon {
+  margin-left: 5px;
+  position: relative;
+  bottom: 10px;
+}
+
+.footer-policy {
+  text-align: center;
+  color: #969696;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 34px 0 10px 0;
+  z-index: 3;
+  position: relative;
+}
