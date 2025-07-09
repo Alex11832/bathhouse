@@ -809,7 +809,7 @@ button:focus-visible, a:focus-visible {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 400px;
+  height: 430px;
 }
 
 .mobile-menu-header {
@@ -1069,6 +1069,9 @@ button:focus-visible, a:focus-visible {
   .catalog-icon {
     display: none;
   }
+  .mobile-hidden {
+    display: none;
+  }
   .firewood-img, .broom-img {
     display: none !important;
   }
@@ -1230,6 +1233,9 @@ button:focus-visible, a:focus-visible {
     background: rgba(245,247,250, 0.99);
     padding: 0;
     z-index: 9999;
+    width: 385px;
+    height: 450px;
+    margin: auto;
   }
   .popup-inner {
     width: 98vw;
@@ -1279,11 +1285,11 @@ button:focus-visible, a:focus-visible {
   }
   .popup-checklist {
     width: 107px;
-    top: 40%;
+    top: 80%;
   }
   .popup-sign {
     width: 140px;
-    top: 450px;
+    top: 80%;
     left: 0;
   }
   .popup-close {
