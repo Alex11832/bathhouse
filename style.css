@@ -98,20 +98,6 @@ button:focus-visible, a:focus-visible {
   max-width: 190px;
   margin-right: 20px;
 }
-.whatsapp-btn {
-  display: flex;
-  align-items: center;
-  background: #5da3d9;
-  border-radius: 14px;
-  padding: 0 15px 0 14px;
-  height: 44px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  gap: 12px;
-  box-sizing: border-box;
-  overflow: visible;
-}
 .wa-icon {
   position: relative;
   bottom: 15px;
@@ -184,14 +170,13 @@ button:focus-visible, a:focus-visible {
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: 22px;
+  font-size: 24px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 .cta-btn {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   background: #5da3d9;
   color: #fff;
   border: none;
@@ -208,12 +193,14 @@ button:focus-visible, a:focus-visible {
   background: #357bb7;
 }
 .main-btn {
-  max-width: 350px;
+  max-width: 390px;
+  padding: 27px 36px;
 }
 
 /* Секция с заголовком и иконкой */
 .section-title-row {
   display: flex;
+  
   align-items: center;
   justify-content: center;
   gap: 18px;
@@ -229,11 +216,12 @@ button:focus-visible, a:focus-visible {
 
 /* Каталог каркасных бань */
 .frame-baths {
+  position: relative;
   max-width: 1500px;
 }
 .frame-baths .bath-details {
   display: flex;
-  gap: 56px;
+  gap: 20px;
   margin-bottom: 32px;
   align-items: flex-start;
   justify-content: center;
@@ -241,12 +229,12 @@ button:focus-visible, a:focus-visible {
 .frame-baths .bath-images {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
 .frame-baths .main-img {
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 20px;
   border: 3px solid #5da3d9;
   box-shadow: 0 0 24px #5da3d933;
 }
@@ -266,35 +254,32 @@ button:focus-visible, a:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
 }
 .frame-baths .bath-info h3 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 600;
   color: #414141;
   margin: 0 0 14px 0;
   line-height: 1.15;
 }
 .frame-baths .bath-info p {
-  font-size: 17px;
+  font-size: 18px;
   color: #414141;
   margin: 0 0 8px 0;
   line-height: 1.44;
   font-weight: 400;
 }
 .frame-baths .bath-info h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 18px 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
   color: #414141;
 }
 .frame-baths .bath-specs {
   list-style: none;
   padding: 0;
-  margin: 0 0 18px 0;
   font-size: 18px;
   color: #414141;
-  width: 100%;
+  width: 65%;
 }
 .frame-baths .bath-specs li {
   display: flex;
@@ -311,10 +296,11 @@ button:focus-visible, a:focus-visible {
 }
 .frame-baths .bath-specs li span:last-child {
   color: #222;
-  font-weight: 600;
+  font-weight: 400;
 }
 .price {
   font-size: 28px;
+  font-weight: 500;
   text-decoration: underline;
   margin-top: 15px;
 }
@@ -322,11 +308,10 @@ button:focus-visible, a:focus-visible {
   display: flex;
   justify-content: start;
   gap: 38px;
-  margin: 22px 0 16px 0;
 }
 .frame-baths .bath-info .price {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
   color: #414141;
   margin: 0;
   line-height: 1.2;
@@ -347,14 +332,28 @@ button:focus-visible, a:focus-visible {
   padding: 18px 38px;
   border-radius: 14px;
 }
-.frame-baths .cta-btn:last-child {
-  font-size: 18px;
-  padding: 14px 30px;
-  /* max-width: 260px; */
+.cat {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 20px;
+  background: linear-gradient(90deg, #0D5891 0%, #0069BA 100%);
   display: block;
   text-align: center;
+  max-width: 320px;
+  margin-top: 20px;
 }
 
+.wooden-baths {
+  position: relative;
+}
+.firewood-img {
+  position: absolute;
+  left: 0px;  
+  top: 0px;
+  width: 240px;
+  z-index: 3;
+  pointer-events: none;
+}
 .bath-grid {
   display: flex;
   justify-content: center;
@@ -379,7 +378,7 @@ button:focus-visible, a:focus-visible {
 }
 .bath-item h3 {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 28px;
   color: #414141;
   text-align: center;
   margin: 15px 0 22px 0;
@@ -388,11 +387,18 @@ button:focus-visible, a:focus-visible {
 .type {
   height: 70px;
 }
+.broom-img {
+  position: absolute;
+  right: 0px;
+  bottom: 95px;
+  width: 240px;
+  height: 330px;
+  z-index: 10;
+  pointer-events: none;
+}
 
 /* Секция кровли */
 .roof-types {
-  margin-top: 72px;
-  margin-bottom: 30px;
 }
 
 .roof-types .container {
@@ -402,7 +408,7 @@ button:focus-visible, a:focus-visible {
 
 .roof-types .section-title {
   color: #414141;
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 44px;
@@ -412,7 +418,6 @@ button:focus-visible, a:focus-visible {
 .roof-grid {
   display: flex;
   justify-content: center;
-  gap: 44px;
 }
 
 .roof-item {
@@ -432,8 +437,7 @@ button:focus-visible, a:focus-visible {
 
 .roof-title {
   margin: 0 0 32px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
   color: #525252;
   text-align: center;
@@ -442,11 +446,10 @@ button:focus-visible, a:focus-visible {
 
 /* Секция фундамент */
 .foundation-types {
-  margin-top: 74px;
   margin-bottom: 32px;
 }
 .foundation-types .section-title {
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 700;
   color: #414141;
   text-align: center;
@@ -456,7 +459,6 @@ button:focus-visible, a:focus-visible {
 .foundation-grid {
   display: flex;
   justify-content: center;
-  gap: 38px;
   flex-wrap: wrap;
 }
 .foundation-item {
@@ -472,7 +474,6 @@ button:focus-visible, a:focus-visible {
   margin-bottom: 18px;
 }
 .foundation-title {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 36px;
   color: #414141;
@@ -494,8 +495,8 @@ button:focus-visible, a:focus-visible {
   background: linear-gradient(180deg, #e8f1fa 0%, #f6faff 100%);
   border-radius: 36px;
   box-shadow: 0 0 0 2px #e1eaf2;
-  padding: 54px 38px 38px 38px;
-  max-width: 1500px;
+  padding: 65px 38px 38px 38px;
+  max-width: 1800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -503,7 +504,7 @@ button:focus-visible, a:focus-visible {
 
 .calc-form .section-title {
   color: #414141;
-  font-size: 42px;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 14px;
@@ -512,15 +513,15 @@ button:focus-visible, a:focus-visible {
 
 .calc-subtitle {
   color: #313131;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 36px;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 36px;
 }
 
 .calc-fields {
   display: flex;
-  gap: 54px;
+  gap: 150px;
   width: 100%;
   justify-content: space-around;
   margin-bottom: 42px;
@@ -530,7 +531,7 @@ button:focus-visible, a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  width: 350px;
+  width: 550px;
   min-width: 270px;
 }
 
@@ -538,20 +539,20 @@ button:focus-visible, a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 500;
   color: #414141;
 }
 
 .calc-col input,
 .calc-col select {
+  width: 450px;
   padding: 11px 17px;
   border-radius: 7px;
   border: 1.5px solid #d3e0ee;
   font-size: 21px;
   background: #fff;
   margin-top: 2px;
-  font-family: inherit;
   color: #232323;
   outline: none;
   transition: border 0.2s;
@@ -563,19 +564,26 @@ button:focus-visible, a:focus-visible {
 }
 
 .calc-btn {
-  margin-top: 30px;
-  background: #5da3d9;
-  color: #fff;
-  font-size: 28px;
+  font-family: Montserrat;
   font-weight: 600;
-  padding: 16px 52px 16px 52px;
-  border-radius: 16px;
+  font-style: SemiBold;
+  font-size: 26px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  width: 320px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 10px 50px;
+  border-radius: 20px;
   box-shadow: 0 4px 22px #4e8dbf22;
   border: none;
   display: flex;
   align-items: center;
   gap: 17px;
   transition: background 0.18s;
+  background: linear-gradient(90deg, #0D5891 0%, #0069BA 100%);
 }
 
 .calc-btn:hover {
@@ -583,19 +591,19 @@ button:focus-visible, a:focus-visible {
 }
 
 .calc-icon {
-  width: 63px;
-  height: 67px;
-  margin-left: 8px;
+  position: relative;
+  bottom: 20px;
   display: inline-block;
   vertical-align: middle;
 }
 /* Footer */
 .footer {
+  min-height: 350px; /* или по размеру footer.webp */
+  background: url("img/footer.webp") left bottom/contain no-repeat;
   position: relative;
   border-radius: 32px 32px 0 0;
-  margin-top: 44px;
+  margin-top: 150px;
   overflow: visible;
-  background: url("img/footer.webp") no-repeat;
 }
 
 .footer .container {
@@ -611,18 +619,24 @@ button:focus-visible, a:focus-visible {
   align-items: flex-start;
   justify-content: space-around;
   gap: 44px;
-  border: 1.2px solid #bababa;
-  border-radius: 32px;
-  padding: 42px 44px 38px 44px;
+  padding: 42px 44px 0 44px;
   position: relative;
   z-index: 2;
+}
+.footer-pol {
+  position: relative;
+  bottom: 120px;
+  max-width: 1800px;
+  border: 1.2px solid #bababa;
+  border-radius: 32px;
+  margin: 0 auto;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   color: #414141;
   min-width: 230px;
@@ -638,7 +652,8 @@ button:focus-visible, a:focus-visible {
   margin-bottom: 12px;
 }
 .footer-menu a {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   color: #414141;
   text-decoration: none;
   transition: color 0.18s;
@@ -650,8 +665,7 @@ button:focus-visible, a:focus-visible {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
+  align-items: center;
   min-width: 320px;
 }
 
@@ -659,20 +673,19 @@ button:focus-visible, a:focus-visible {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 27px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 500;
   color: #1a222f;
   margin-bottom: 4px;
 }
 
 .footer-callback {
   color: #357a29;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   text-decoration: underline dotted #85bb65 2px;
   text-underline-offset: 3px;
   margin-bottom: 2px;
-  margin-left: 45px;
 }
 
 .footer-desc {
@@ -692,7 +705,7 @@ button:focus-visible, a:focus-visible {
   height: 44px;
   color: #fff;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 6px;
   text-decoration: none;
 }
@@ -707,8 +720,8 @@ button:focus-visible, a:focus-visible {
   text-align: center;
   color: #969696;
   font-size: 18px;
-  font-weight: 400;
-  margin: 34px 0 10px 0;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
   z-index: 3;
   position: relative;
 }

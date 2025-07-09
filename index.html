@@ -65,7 +65,8 @@
       </section>
     </section>
 
-    <section class="bath-types">
+    <!-- Секция типы бань -->
+    <section class="bath-types container">
         <div class="section-title-row">
         <h2 class="section-title">Бани бывают</h2>
         <img src="img/catalog.svg" width="56" height="57" alt="Каталог" class="catalog-icon">
@@ -86,10 +87,12 @@
           <h3 class="type">Баня с мансардой<br>2-х этажная баня</h3>
           <a href="order" class="cta-btn">Заказать расчет</a>
         </div>
-      </div>      
+      </div>
     </section>
 
-    <section class="wooden-baths">
+    <!-- Секция виды бань -->
+    <section class="wooden-baths container">
+      <img src="img/firewood.webp" width="220" height="185" alt="Дрова для бани" class="firewood-img" loading="lazy">
       <div class="section-title-row">
         <h2 class="section-title">Деревянные бани по виду</h2>
         <img src="img/catalog.svg" width="48" height="48" alt="" class="catalog-icon" aria-hidden="true">
@@ -130,10 +133,18 @@
             <img src="img/bathhouse3.webp" width="215" height="145" alt="Вид 2" class="small-img" loading="lazy" />
             <img src="img/bathhouse3.webp" width="215" height="145" alt="Вид 3" class="small-img" loading="lazy" />
           </div>
+          <a href="catalog" class="cta-btn cat">
+            Полный каталог
+            <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 15L27 8L20 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 15L18 8L11 1" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 15L8 8L1 1" stroke="white" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
         <div class="bath-info">
           <h3>Баня с террасой №1 (4×4.5 м)</h3>
-          <p>Мечтаете о собственной бане? Каркасная технология постройки — экономичное решение для строительства. Не нужен фундамент, достаточно винтовых или буронабивных свай. Срок строительства — от 15 дней. Каркасная баня — идеальный выбор! Предлагаем с отделкой и без, под ключ в Москве и области.</p>
+          <p>Мечтаете о собственной бане! Каркасная технология постройки бань экономичное решения для постройки своей бани. Не нужно фундамента, достаточно винтовых или буронабивных свай или на блоках можно.  Срок строительство не большой от 15 дней, в отличии от кирпичной + отделка и растягивается на месяца и года. А тут быстро можно построить и пользоваться. Каркасная баня это идеальное решение для постройки бани!  Мы Вам предлагаем строительство бани с отделкой и без отделки бани, под ключ в Нижнем Новгороде и Нижегородской области по хорошей цене! Посмотрите другие проекты бань.</p>
           <h4>Характеристики бани:</h4>
           <ul class="bath-specs">
             <li><span>Размер</span><span>3 на 4</span></li>
@@ -147,9 +158,9 @@
           <a href="catalog" class="cta-btn">Заявка на консультацию</a>
         </div>
       </div>
-      <a href="catalog" class="cta-btn">Полный каталог &gt;&gt;</a>
+      <img src="img/broom.webp" width="235" height="355" alt="Веник для бани" class="broom-img" loading="lazy">
     </section>
-
+    
     <!-- Секция кровли -->
   <section class="roof-types container">
       <h2 class="section-title">Варианты кровли бани</h2>
@@ -202,7 +213,7 @@
   <form class="calc-form container">
     <h2 class="section-title">Бани по вашим размерам</h2>
     <div class="calc-subtitle">
-      ( Заполняйте что знаете, если не знаете — можете оставить поля пустыми )
+      ( Заполняйте что знаете, если не знаете<br>можете оставить поля пустыми )
     </div>
     <div class="calc-fields">
       <div class="calc-col">
@@ -259,7 +270,7 @@
         </label>
         <label>
           <span>Ваш телефон:</span>
-          <input type="text" placeholder="+7 (___) ___-__-__">
+          <input type="tel" placeholder="+7 (___) ___-__-__">
         </label>
       </div>
     </div>
@@ -271,32 +282,34 @@
 
   <!-- Footer -->
    <footer class="footer container"> 
-      <div class="footer-row">
-        <div class="footer-col footer-logo">
-          <img src="img/logo.svg" width="63" height="56" alt="Банидом.рф">
-          <span>Банидом.рф</span>
-        </div>
-        <div class="footer-col footer-menu">
-          <ul>
-            <li><a href="#">Бани</a></li>
-            <li><a href="#">Дома</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-contacts">
-          <div class="footer-phone-row">
-            <img src="img/phone.svg" width="35" height="35" alt="Телефон">
-            <span class="footer-phone">8 (953) 123-45-67</span>
+      <div class="footer-pol">
+        <div class="footer-row">
+          <div class="footer-col footer-logo">
+            <img src="img/logo.svg" width="63" height="56" alt="Банидом.рф">
+            <span>Банидом.рф</span>
           </div>
-          <a href="#" class="footer-callback">Заказать звонок</a>
-          <div class="footer-desc">Запись на бесплатную консультацию через</div>
-          <a href="#" class="whatsapp-btn">
-            WhatsApp
-            <img src="img/whatsapp.png" width="52" height="49" alt="WhatsApp" class="wa-icon">
-          </a>
+          <div class="footer-col footer-menu">
+            <ul>
+              <li><a href="#">Бани</a></li>
+              <li><a href="#">Дома</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-contacts">
+            <div class="footer-phone-row">
+              <img src="img/phone.svg" width="35" height="35" alt="Телефон">
+              <span class="footer-phone">8 (953) 123-45-67</span>
+            </div>
+            <a href="#" class="footer-callback">Заказать звонок</a>
+            <div class="footer-desc">Запись на бесплатную<br>консультацию через</div>
+            <a href="#" class="whatsapp-btn">
+              WhatsApp
+              <img src="img/whatsapp.png" width="52" height="49" alt="WhatsApp" class="wa-icon">
+            </a>
+          </div>
         </div>
-      </div>
       <div class="footer-policy">Политика конфиденциальности</div>
+    </div>
   </footer>
 
   </body>
