@@ -599,7 +599,7 @@ button:focus-visible, a:focus-visible {
 /* Footer */
 .footer {
   min-height: 350px; /* или по размеру footer.webp */
-  background: url("img/footer.webp") left bottom/contain no-repeat;
+  background: url("img/footer.webp") bottom/contain no-repeat;
   position: relative;
   border-radius: 32px 32px 0 0;
   margin-top: 150px;
@@ -612,8 +612,6 @@ button:focus-visible, a:focus-visible {
   padding-bottom: 16px;
   z-index: 2;
   background: transparent;
-  box-shadow: 0px 4px 4px 0px #00000040;
-
 }
 
 .footer-row {
@@ -632,6 +630,7 @@ button:focus-visible, a:focus-visible {
   border: 1.2px solid #bababa;
   border-radius: 32px;
   margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .footer-logo {
