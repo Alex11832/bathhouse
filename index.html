@@ -13,6 +13,41 @@
   <body>
     <section class="container background">
       <header class="header">
+        <div class="mobile-menu hidden">
+        <div class="mobile-menu-header">
+          <img src="img/logo.svg" alt="Банидом.рф" class="mobile-logo" width="34" height="32">
+          <span class="mobile-title">Банидом.рф</span>
+          <button class="mobile-menu-close" aria-label="Закрыть меню">
+            <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L24 24M24 8L8 24" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav-list">
+          <a href="#">Бани</a>
+          <a href="#">Дома</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <div class="mobile-whatsapp-label">
+          Запись на бесплатную<br>консультацию через
+        </div>
+        <a href="#" class="whatsapp-btn">
+              <span class="whatsapp-btn-text">WhatsApp</span>
+              <img src="img/whatsapp.png" width="52" height="49" alt="WhatsApp" class="wa-icon">
+            </a>
+        <div class="mobile-phone-block">
+          <img src="img/phone.svg" width="30" height="30" alt="Телефон" class="mobile-phone-icon">
+          <span class="mobile-phone-number">8 (953) 123-45-67</span>
+        </div>
+        <a href="#" class="mobile-callback">Заказать звонок</a>
+      </div>
+        <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+        <label for="burger-toggle" class="burger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <div class="header-row">
           <div class="logo-group">
             <img src="img/logo.svg" width="63" height="56" alt="Логотип">
@@ -220,7 +255,7 @@
         <label>
           <span>Размер бани:</span>
           <select>
-            <option>2.5 x5 м</option>
+            <option>2.5x5 м</option>
             <option>3x6 м</option>
             <option>4x6 м</option>
           </select>
@@ -284,23 +319,27 @@
    <footer class="footer container"> 
       <div class="footer-pol">
         <div class="footer-row">
-          <div class="footer-col footer-logo">
+          <div class="footer-logo">
             <img src="img/logo.svg" width="63" height="56" alt="Банидом.рф">
             <span>Банидом.рф</span>
           </div>
-          <div class="footer-col footer-menu">
+          <div class="footer-menu">
             <ul>
               <li><a href="#">Бани</a></li>
               <li><a href="#">Дома</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <div class="footer-col footer-contacts">
+          <div class="footer-contacts">
             <div class="footer-phone-row">
               <img src="img/phone.svg" width="35" height="35" alt="Телефон">
-              <span class="footer-phone">8 (953) 123-45-67</span>
+              <div class="footer-contacts">
+                <span class="footer-phone">8 (953) 123-45-67</span>
+                <a href="#" class="footer-callback">Заказать звонок</a>
+              </div>
+              
             </div>
-            <a href="#" class="footer-callback">Заказать звонок</a>
+            
             <div class="footer-desc">Запись на бесплатную<br>консультацию через</div>
             <a href="#" class="whatsapp-btn">
               WhatsApp
@@ -312,5 +351,20 @@
     </div>
   </footer>
 
+  <!-- PopUp -->
+   <div class="popup-thanks hidden">
+    <img src="img/sign.webp" width="300" height="230" alt="Большой срок эксплуатации" class="popup-sign" loading="lazy">
+    
+    <div class="popup-inner">
+      <div class="popup-content">
+        <h2>Спасибо за<br>обращение</h2>
+        <div class="popup-sub">В нашу компанию</div>
+        <div class="popup-desc">Мы скоро с вами свяжемся</div>
+        <a href="/" class="cta-btn cat">На главную</a>
+      </div>
+    </div>
+    <img src="img/checklist.webp" width="200" height="150" alt="Чеклист" class="popup-checklist" loading="lazy">
+</div>
+<script src="main.js"></script>
   </body>
 </html>

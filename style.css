@@ -98,11 +98,6 @@ button:focus-visible, a:focus-visible {
   max-width: 190px;
   margin-right: 20px;
 }
-.wa-icon {
-  position: relative;
-  bottom: 15px;
-  display: block;
-}
 .phone-group {
   display: flex;
   flex-direction: column;
@@ -398,9 +393,6 @@ button:focus-visible, a:focus-visible {
 }
 
 /* Секция кровли */
-.roof-types {
-}
-
 .roof-types .container {
   padding-top: 0;
   padding-bottom: 0;
@@ -568,7 +560,6 @@ button:focus-visible, a:focus-visible {
   font-weight: 600;
   font-style: SemiBold;
   font-size: 26px;
-  leading-trim: NONE;
   line-height: 100%;
   letter-spacing: 0%;
 
@@ -725,4 +716,526 @@ button:focus-visible, a:focus-visible {
   margin: 20px 0 10px 0;
   z-index: 3;
   position: relative;
+}
+/* PopUp */
+.hidden {
+  display: none !important;
+}
+
+.popup-thanks {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(245,247,250, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  margin: auto;
+}
+
+.popup-inner {
+  position: relative;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #fafdff 0%, #e8f1fa 100%);
+  background-image: url("img/cloude.webp");
+  box-shadow: 0 6px 48px 0 #8ca8d644;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 60px 40px;
+  height: 700px;
+  width: 1200px;
+}
+
+.popup-content {
+  text-align: center;
+  width: 100%;
+}
+
+.popup-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #414141;
+  letter-spacing: -1px;
+}
+.popup-sub {
+  font-size: 50px;
+  color: #414141;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.pop-btn {
+  font-size: 30px;
+
+}
+.popup-desc {
+  font-size: 26px;
+  color: #414141;
+  margin-bottom: 28px;
+  font-weight: 00;
+}
+.popup-content .cta-btn {
+  font-size: 22px;
+  padding: 14px 42px;
+  border-radius: 14px;
+  margin: 0 auto;
+}
+
+.popup-sign {
+  position: absolute;
+  left: 28px;
+  bottom: 22px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.popup-checklist {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  padding: 28px 10px 18px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 400px;
+}
+
+.mobile-menu-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.mobile-logo {
+  width: 34px;
+  height: 32px;
+}
+.mobile-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #414141;
+  margin-left: 8px;
+  flex: 1;
+}
+.mobile-menu-close {
+  background: none;
+  border: none;
+  padding: 6px;
+  margin-left: auto;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s;
+}
+.mobile-menu-close:hover {
+  background: #f5f6f8;
+  border-radius: 50%;
+}
+.mobile-nav-list {
+  margin: 22px 0 17px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.mobile-nav-list a {
+  font-size: 21px;
+  color: #414141;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.mobile-nav-list a:active {
+  color: #357bb7;
+}
+.mobile-whatsapp-label {
+  text-align: center;
+  color: #414141;
+  font-size: 15px;
+  margin: 0 0 7px 0;
+}
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #5da3d9;
+  border-radius: 14px;
+  padding: 20px 40px;
+  width: 180px;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 auto 13px auto;
+  text-decoration: none;
+}
+.mobile-phone-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 18px;
+  color: #1a222f;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+.mobile-callback {
+  color: #357a29;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline dotted #85bb65 2px;
+  text-underline-offset: 2px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+}
+@media (min-width: 901px) {
+  .mobile-menu { display: none !important; }
+}
+
+@media (max-width: 900px) {
+
+  .container {
+    max-width: 100vw;
+    padding: 0 5vw;
+  }
+
+  /* Header и бургер */
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    /* height: 384px; */
+    padding: 15px 20px;
+  }
+  .logo-group {
+    gap: 10px;
+  }
+  .main-nav,
+  .consult-group,
+  .phone-group {
+    display: none !important;
+  }
+  .burger {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 200;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+  }
+  .burger span {
+    display: block;
+    width: 32px;
+    height: 4px;
+    background: #414141;
+    border-radius: 2px;
+    margin: 4px 0;
+    transition: all 0.28s;
+  }
+  .burger-toggle:checked + .burger span:nth-child(1) { transform: translateY(8px) rotate(45deg);}
+  .burger-toggle:checked + .burger span:nth-child(2) { opacity: 0;}
+  .burger-toggle:checked + .burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg);}
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(250,251,252,0.98);
+    backdrop-filter: blur(2px);
+    transition: all 0.28s;
+  }
+  .type {
+    height: 100%;
+  }
+  .roof-item {
+    padding: 0;
+  }
+  .mobile-nav ul {
+    margin: 0;
+    padding: 90px 0 0 0;
+    list-style: none;
+    text-align: center;
+  }
+  .mobile-nav li {
+    margin-bottom: 32px;
+  }
+  .mobile-nav a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #414141;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    transition: color 0.18s, background 0.18s;
+  }
+  .mobile-nav a:hover {
+    background: #e5f0ff;
+    color: #357bb7;
+  }
+  .mobile-phone {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #357bb7;
+    margin-top: 30px;
+  }
+  .burger-toggle:checked ~ .mobile-nav { display: block; }
+
+  /* Hero */
+  .background {
+    height: 500px;
+    padding: 20px;
+    background-position: 60% top;
+  }
+  .hero-content {
+    padding: 27px 0 0 0;
+    gap: 13px;
+    max-width: 100vw;
+  }
+  .section-title {
+    font-size: 27px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .feature-list li {
+    font-size: 16px;
+    gap: 8px;
+  }
+  .cta-btn {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 290px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  /* Сетки и карточки */
+  .bath-grid,
+  .roof-grid,
+  .foundation-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bath-img,
+  .roof-img,
+  .foundation-item img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .bath-item h3,
+  .roof-title,
+  .foundation-title {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .section-title-row {
+    max-width: 300px;
+    gap: 8px;
+    margin: 40px auto 0 auto;
+  }
+  .frame-baths .bath-info .price {
+    font-size: 24px;
+  }
+  .catalog-icon {
+    display: none;
+  }
+  .firewood-img, .broom-img {
+    display: none !important;
+  }
+
+  /* Каталог каркасных бань */
+  .frame-baths .bath-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .frame-baths .main-img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 96vw;
+  }
+  .frame-baths .small-images {
+    gap: 6px;
+    margin-top: 7px;
+  }
+  .frame-baths .small-img {
+    width: 29vw !important;
+    height: auto !important;
+    max-width: 90px;
+  }
+  .frame-baths .bath-info {
+    align-items: flex-start;
+    max-width: 100vw;
+    width: 100%;
+  }
+  .frame-baths .bath-info h3 {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+  }
+  .frame-baths .bath-info p,
+  .frame-baths .bath-info h4 {
+    font-size: 13px;
+    margin: 0 0 6px 0;
+  }
+  .frame-baths .bath-specs,
+  .frame-baths .price-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    font-size: 11px;
+    margin-top: 24px;
+  }
+  .frame-baths .bath-info .cta-btn {
+    padding: 10px 0;
+  }
+  .cat {
+    font-size: 13px;
+    padding: 10px;
+    max-width: 100vw;
+  }
+
+  /* Калькулятор */
+  .calc-form {
+    padding: 18px 3vw;
+    border-radius: 45px;
+    box-shadow: 0 0 0 1px #e1eaf2;
+    max-width: 99vw;
+    margin: 0 15px 150px 15px;
+  }
+  .calc-form .section-title {
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+  .calc-subtitle {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .calc-btn {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 0 30px;
+  }
+  .calc-fields {
+    flex-direction: column;
+    gap: 12px;
+    /* width: 100%; */
+    margin-bottom: 8px;
+  }
+  .calc-col {
+    width: 100%;
+    min-width: 0;
+    gap: 8px;
+  }
+  .calc-col label {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .calc-col input,
+  .calc-col select {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+
+
+  /* Footer */
+  .footer {
+    min-height: 120px;
+    border-radius: 14px 14px 0 0;
+    margin-top: 32px;
+    padding: 0;
+    background-size: contain !important;
+    background-position: bottom !important;
+  }
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 0 0 0;
+  }
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 600;
+    gap: 4px;
+    min-width: 60px;
+  }
+  .footer-menu ul {
+    text-align: center;
+  }
+  .footer-menu a {
+    font-size: 18px;
+  }
+  .footer-phone-row {
+    font-size: 13px;
+    gap: 5px;
+  }
+  .footer-callback {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  .footer-desc {
+    font-size: 10px;
+    margin: 1px 0;
+  }
+  .footer-contacts {
+    min-width: 0;
+  }
+  .whatsapp-btn {
+    font-weight: normal;
+    font-size: 18px;
+  }
+  .wa-icon {
+    margin-left: 2px;
+    bottom: 10px;
+  }
+  .footer-policy {
+    font-size: 9px;
+    margin: 6px 0 3px 0;
+  }
+
+  /* Popup */
+  .popup-inner {
+    width: 98vw;
+    min-height: unset;
+    padding: 12px 1vw;
+    height: auto;
+    border-radius: 8px;
+  }
+  .popup-sign, .popup-checklist {
+    display: none !important;
+  }
+  .popup-content h2, .popup-sub {
+    font-size: 14px;
+  }
+  .popup-desc {
+    font-size: 9px;
+    margin-bottom: 7px;
+  }
 }
